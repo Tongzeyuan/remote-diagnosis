@@ -1,0 +1,18 @@
+# 开发环境配置
+server:
+  port: 8080 # 服务器的HTTP端口
+  address: 0.0.0.0 # 允许局域网访问
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 查看日志
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource # 配置数据源类型
+    # 配置连接数据库的各个信息
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/remote-diagnosis?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8&allowPublicKeyRetrieval=true
+    username: root
+    password: 123
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
